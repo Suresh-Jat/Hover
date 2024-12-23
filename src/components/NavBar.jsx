@@ -12,13 +12,15 @@ const NavBar = () => {
       <div className="container px-4 mx-auto relative text-sm">
         <div className="flex justify-between items-center">
           <div className="flex items-center flex-shrink-0">
-            <img className="h-10 w-10 mr-2" src={logo} alt="Logo" />
+            <img className="h-14 w-14 mr-2" src={logo} alt="Logo" />
             <span className="text-xl tracking-tight">Hover</span>
           </div>
           <ul className="hidden lg:flex ml-4 space-x-12">
             {navItems.map((item, index) => (
               <li key={index}>
-                <a href={item.href}>{item.label}</a>
+                <a className="hover:text-blue-400" href={item.href}>
+                  {item.label}
+                </a>
               </li>
             ))}
           </ul>
@@ -28,7 +30,7 @@ const NavBar = () => {
             </a>
             <a
               href="#"
-              className="bg-gradient-to-r from-orange-400 to-orange-700 px-2 py-3 rounded-md"
+              className="bg-gradient-to-r from-blue-800 to-red-500 px-2 py-3 rounded-md"
             >
               Create an Account
             </a>
@@ -55,7 +57,7 @@ const NavBar = () => {
               </a>
               <a
                 href="#"
-                className="py-2 px-3 border rounded-md bg-gradient-to-r from-orange-500 to-orange-700"
+                className="py-2 px-3 border rounded-md bg-gradient-to-r from-blue-800 to-red-500"
               >
                 Create an Account
               </a>
